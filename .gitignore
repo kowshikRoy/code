@@ -70,3 +70,4 @@ sane
 !sane/
 bin/
 in
+*.in
