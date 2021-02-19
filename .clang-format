@@ -1,0 +1,15 @@
+﻿---
+BasedOnStyle: Google
+AlignConsecutiveMacros: 'true'
+AllowShortCaseLabelsOnASingleLine: 'true'
+AllowShortBlocksOnASingleLine: 'true'
+AllowShortEnumsOnASingleLine: 'true'
+AllowShortFunctionsOnASingleLine: 'All'
+AllowShortIfStatementsOnASingleLine: 'Always'
+AllowShortLambdasOnASingleLine: 'Inline'
+AllowShortLoopsOnASingleLine: 'true'
+AlwaysBreakTemplateDeclarations: 'No'
+IndentCaseLabels: 'true'
+IndentWidth: '4'
+NamespaceIndentation: 'All'
+...
