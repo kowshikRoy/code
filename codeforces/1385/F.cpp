@@ -16,7 +16,7 @@ int dfs(int u, int p) {
         }
 
     bool flag = true;
-    int cnt = 0;
+    int cnt   = 0;
 
     for (auto v : g[u])
         if (v != p) {

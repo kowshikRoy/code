@@ -58,13 +58,13 @@ int main() {
                         int iM = 100, pivot = -1;
                         for (auto x : V) {
                             if (x.second < iM) {
-                                iM = x.second;
+                                iM    = x.second;
                                 pivot = x.first;
                             }
                         }
                         if (iM == i) {
                             fix[pivot] = i;
-                            rfix[i] = pivot;
+                            rfix[i]    = pivot;
                         }
                         V.erase(pivot);
                     }
@@ -82,7 +82,7 @@ int main() {
                     for (auto c : vec) {
                         if (fix.count(c) == 0) {
                             rfix[i] = c;
-                            fix[c] = i;
+                            fix[c]  = i;
                             break;
                         }
                     }

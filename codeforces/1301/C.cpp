@@ -16,7 +16,7 @@ int main() {
             cout << 0 << endl;
             continue;
         }
-        long long d = (n - n % m) / m;
+        long long d   = (n - n % m) / m;
         long long ans = nc2(n) - nc2(d) - nc2(n % m);
         cout << ans << endl;
     }

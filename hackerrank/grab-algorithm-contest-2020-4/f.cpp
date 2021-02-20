@@ -82,17 +82,17 @@ int main() {
         int n = 0;
         for (int i = 0; A[i]; i++) {
             Apos[i] = n;
-            r[n] = A[i] - 'A' + 1;
+            r[n]    = A[i] - 'A' + 1;
             n++;
         }
         r[n++] = 30;
         for (int i = 0; B[i]; i++) {
             Bpos[i] = n;
-            r[n] = B[i] - 'A' + 1;
+            r[n]    = B[i] - 'A' + 1;
             n++;
         }
         r[n++] = 30;
-        r[n] = 0;
+        r[n]   = 0;
         da(r, sa, n + 1, 36);  // don't forget SIGMA + 1. It will ruin you.
         calheight(r, sa, n);
 

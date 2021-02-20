@@ -30,13 +30,13 @@ using namespace std;
 #define WRITE freopen("out.txt", "w", stdout)
 template <class T> inline void input(T &x) {
     register char c = getchar();
-    x = 0;
-    int neg = 0;
+    x               = 0;
+    int neg         = 0;
     for (; ((c < 48 || c > 57) && c != '-'); c = getchar())
         ;
     if (c == '-') {
         neg = 1;
-        c = getchar();
+        c   = getchar();
     }
     for (; c > 47 && c < 58; c = getchar()) {
         x = (x << 1) + (x << 3) + c - 48;
@@ -72,7 +72,7 @@ int main() {
 
     for (int len = 3; len <= n; len++) {
         for (int j = 0; j + len <= n; j++) {
-            int k = j + len - 1;
+            int k    = j + len - 1;
             dp[j][k] = max(min(a[j] - a[j + 1] + dp[j + 2][k],
                                a[j] - a[k] + dp[j + 1][k - 1]),
                            min(a[k] - a[j] + dp[j + 1][k - 1],

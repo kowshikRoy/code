@@ -2,7 +2,7 @@
 using namespace std;
 
 const int LG = 20;
-const int N = 2e5 + 5;
+const int N  = 2e5 + 5;
 int P[N][20];
 int lev[N];
 vector<int> G[N];
@@ -28,7 +28,7 @@ void dfs(int u, int p) {
     for (int i = 0; i < G[u].size(); i++) {
         int v = G[u][i];
         if (v == p) continue;
-        lev[v] = 1 + lev[u];
+        lev[v]  = 1 + lev[u];
         P[v][0] = u;
         dfs(v, u);
     }

@@ -28,7 +28,7 @@ int main() {
     cin >> n;
 
     int days[7] = {0};
-    int day = 2;
+    int day     = 2;
 
     for (int y = 1900; y < 1900 + n; y++) {
         for (int m = 1; m <= 12; m++) {

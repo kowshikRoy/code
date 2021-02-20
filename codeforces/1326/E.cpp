@@ -24,8 +24,8 @@ int query(int n, int b, int e, int i, int j) {
     if (b > j || e < i) return 0;
     if (b >= i && e <= j) return T[n];
     int mid = b + e >> 1;
-    int p1 = query(lc, b, mid, i, j);
-    int p2 = query(rc, mid + 1, e, i, j);
+    int p1  = query(lc, b, mid, i, j);
+    int p2  = query(rc, mid + 1, e, i, j);
     if (a[p1] < a[p2]) return p2;
     return p1;
 }
@@ -77,7 +77,7 @@ int main() {
             upd(1, 1, n, q);
             pivot = p;
         } else {
-            int used = query(B, p);
+            int used    = query(B, p);
             int deleted = query(D, p);
             if (deleted < used) {
                 cout << deleted << " " << used << endl;

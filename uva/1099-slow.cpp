@@ -27,7 +27,7 @@ bool solve(int mask, int x, int y) {
             }
         }
     }
-    vis[mask][x] = cnt;
+    vis[mask][x]       = cnt;
     return dp[mask][x] = ret;
 }
 

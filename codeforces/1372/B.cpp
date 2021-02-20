@@ -18,20 +18,20 @@ int main() {
             int A = 1, B = n - 1;
             for (int i = 2; i * i <= n; i++) {
                 if (n % i == 0) {
-                    int x = i;
-                    int y = n - x;
+                    int x       = i;
+                    int y       = n - x;
                     long long l = lcm(x, y);
                     if (l < iL) {
-                        A = x;
-                        B = y;
+                        A  = x;
+                        B  = y;
                         iL = l;
                     }
                     x = n / i;
                     y = n - x;
                     l = lcm(x, y);
                     if (l < iL) {
-                        A = x;
-                        B = y;
+                        A  = x;
+                        B  = y;
                         iL = l;
                     }
                 }

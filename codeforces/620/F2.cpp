@@ -16,7 +16,7 @@ int main() {
     for (int i = 1; i <= n; i++) {
         int best = 0;
         for (int j = i; j <= n; j++) {
-            best = max(best, p[a[i]] ^ p[a[j]] ^ min(a[i], a[j]));
+            best  = max(best, p[a[i]] ^ p[a[j]] ^ min(a[i], a[j]));
             dp[j] = best;
         }
         for (int j = 1; j <= m; j++) {

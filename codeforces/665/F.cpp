@@ -13,7 +13,7 @@ using namespace std;
 namespace pcf {
     long long dp[MAXN][MAXM];
     unsigned int ar[(MAX >> 6) + 5] = {0};
-    int len = 0, primes[MAXP], counter[MAX];
+    int len                         = 0, primes[MAXP], counter[MAX];
 
     void Sieve() {
         setbit(ar, 0), setbit(ar, 1);

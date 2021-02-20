@@ -23,7 +23,7 @@ int main() {
     for (int i = 0; i < k; i++) {
         int step = a[i] % tot;
         while (step--) {
-            ptr = fin(ptr + 1);
+            ptr      = fin(ptr + 1);
             int last = -1;
         }
         vis[ptr] = 1;

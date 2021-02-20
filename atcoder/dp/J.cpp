@@ -30,13 +30,13 @@ using namespace std;
 #define WRITE freopen("out.txt", "w", stdout)
 template <class T> inline void input(T &x) {
     register char c = getchar();
-    x = 0;
-    int neg = 0;
+    x               = 0;
+    int neg         = 0;
     for (; ((c < 48 || c > 57) && c != '-'); c = getchar())
         ;
     if (c == '-') {
         neg = 1;
-        c = getchar();
+        c   = getchar();
     }
     for (; c > 47 && c < 58; c = getchar()) {
         x = (x << 1) + (x << 3) + c - 48;
@@ -68,13 +68,13 @@ double solve(int a, int b, int c) {
     if (a == 0 && b == 0 && c == 0) return 0;
     if (vis[a][b][c]) return dp[a][b][c];
     double ret = 0;
-    double p = 1 - (a + b + c) * 1. / n;
+    double p   = 1 - (a + b + c) * 1. / n;
     if (a) ret += (1 + solve(a - 1, b, c)) * a / n;
     if (b) ret += (1 + solve(a + 1, b - 1, c)) * b / n;
     if (c) ret += (1 + solve(a, b + 1, c - 1)) * c / n;
-    ret = ret + p;
-    double e = ret / (1 - p);
-    vis[a][b][c] = 1;
+    ret                = ret + p;
+    double e           = ret / (1 - p);
+    vis[a][b][c]       = 1;
     return dp[a][b][c] = e;
 }
 int main() {

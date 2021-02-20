@@ -17,7 +17,7 @@ int main() {
         }
         sort(a, a + n);
         bool isPositivePossible = false;
-        int ans = 0;
+        int ans                 = 0;
         for (int i = 0; i <= k; i += 2) {
             if (i > 0 && a[i - 1] >= 0) break;
             if (pos >= k - i) isPositivePossible = true;

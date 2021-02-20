@@ -19,7 +19,7 @@ void update(int n, int b, int e, int pos, int x) {
 int main() {
     int q, n;
     cin >> q;
-    n = q;
+    n       = q;
     int pos = 0;
     while (q--) {
         int x;

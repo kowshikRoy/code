@@ -2,7 +2,7 @@
 using namespace std;
 
 const int maxn = 105;
-const int INF = 1e9;
+const int INF  = 1e9;
 typedef int T;
 struct Edge {
     int u, v;
@@ -36,7 +36,7 @@ struct Dinic {
         memset(vis, 0, sizeof vis);
         queue<int> q;
         q.push(s);
-        d[s] = 0;
+        d[s]   = 0;
         vis[s] = 1;
         while (!q.empty()) {
             int x = q.front();
@@ -45,7 +45,7 @@ struct Dinic {
                 Edge &e = edge[G[x][i]];
                 if (!vis[e.v] && e.cap > e.flow) {
                     vis[e.v] = true;
-                    d[e.v] = d[x] + 1;
+                    d[e.v]   = d[x] + 1;
                     q.push(e.v);
                 }
             }
@@ -73,7 +73,7 @@ struct Dinic {
     T dinitz(int s, int t) {
         this->s = s;
         this->t = t;
-        T flow = 0;
+        T flow  = 0;
         while (bfs()) {
             memset(cur, 0, sizeof cur);
             flow += dfs(s, INF);

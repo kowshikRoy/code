@@ -5,13 +5,13 @@ using namespace std;
 #define in3(x, y, z) in(x), in2(y, z)
 template <class T> inline void input(T &x) {
     register char c = getchar_unlocked();
-    x = 0;
-    int neg = 0;
+    x               = 0;
+    int neg         = 0;
     for (; ((c < 48 || c > 57) && c != '-'); c = getchar_unlocked())
         ;
     if (c == '-') {
         neg = 1;
-        c = getchar_unlocked();
+        c   = getchar_unlocked();
     }
     for (; c > 47 && c < 58; c = getchar_unlocked()) {
         x = (x << 1) + (x << 3) + c - 48;
@@ -19,7 +19,7 @@ template <class T> inline void input(T &x) {
     if (neg) x = -x;
 }
 
-const int N = 200005;
+const int N     = 200005;
 const int block = 400;
 int n, m, ques;
 struct Query {

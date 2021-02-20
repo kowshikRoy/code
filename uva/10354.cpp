@@ -51,7 +51,7 @@ int main() {
         }
         vis[of] = 1;
         vis[bh] = 1;
-        int v = dij(yh, market);
+        int v   = dij(yh, market);
         if (vis[yh] || vis[market] || v == -1) printf("MISSION IMPOSSIBLE.\n");
         else
             printf("%d\n", v);

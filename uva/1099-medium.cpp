@@ -14,7 +14,7 @@ bool solve(int mask, int x) {
     if (!(mask & (mask - 1))) { return tot[mask] == x * y; }
     if (vis[mask][x] == cnt) return dp[mask][x];
     vis[mask][x] = cnt;
-    int ret = false;
+    int ret      = false;
     for (int a = (mask - 1) & mask; a; a = (a - 1) & mask) {
         int b = mask ^ a;
         if (tot[a] % x == 0 && solve(a, min(tot[a] / x, x)) &&

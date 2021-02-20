@@ -14,7 +14,7 @@ int main() {
     int y;
     cin >> y;
     int ini = y;
-    int rm = 0;
+    int rm  = 0;
     for (;;) {
         rm = (rm + 365 + leap(y)) % 7;
         y++;

@@ -1,6 +1,7 @@
 ﻿---
 BasedOnStyle: Google
 AlignConsecutiveMacros: 'true'
+AlignConsecutiveAssignments: 'true'
 AllowShortCaseLabelsOnASingleLine: 'true'
 AllowShortBlocksOnASingleLine: 'true'
 AllowShortEnumsOnASingleLine: 'true'

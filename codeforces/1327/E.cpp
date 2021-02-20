@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 2e5 + 5;
-int mod = 998244353;
+int mod     = 998244353;
 long long rm[N];
 
 long long calc(int n) {

@@ -13,7 +13,7 @@ int main() {
     for (int i = 1; i < n; i++) {
         if (arr[i] - arr[i - 1] < iMax) {
             iMax = arr[i] - arr[i - 1];
-            ans = 1;
+            ans  = 1;
         } else if (arr[i] - arr[i - 1] == iMax)
             ans++;
     }

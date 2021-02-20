@@ -29,10 +29,10 @@ int main() {
         for (auto ev : e) {
             if (ev.kind == 1) {
                 if (ev.t >= b1) {
-                    b1 = ev.nxt;
+                    b1         = ev.nxt;
                     out[ev.id] = 'C';
                 } else if (ev.t >= b2) {
-                    b2 = ev.nxt;
+                    b2         = ev.nxt;
                     out[ev.id] = 'J';
                 } else {
                     flag = 0;

@@ -94,8 +94,8 @@ int main() {
     for (int i = 0; i < p; i++) {
         update(1, 1, 1000000, mons[i].y, 1000000, mons[i].z);
         long long res = query(1, 1, 1000000, 1, 1000000);
-        long long aw = query(abits, mons[i].x + 1);
-        profit = max(profit, res - aw);
+        long long aw  = query(abits, mons[i].x + 1);
+        profit        = max(profit, res - aw);
     }
     cout << profit << endl;
     return 0;

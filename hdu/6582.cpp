@@ -8,7 +8,7 @@
 using namespace std;
 using PII = pair<long long, long long>;
 
-const int N = 1e4 + 4;
+const int N         = 1e4 + 4;
 const long long INF = 1LL << 60;
 vector<PII> g[N], r[N];
 int n, m;
@@ -50,7 +50,7 @@ Complexity : V^2E
 
 */
 const int maxn = 10005;
-using T = long long;
+using T        = long long;
 struct Edge {
     int u, v;
     T cap, flow;
@@ -83,7 +83,7 @@ struct Dinic {
         memset(vis, 0, sizeof vis);
         queue<int> q;
         q.push(s);
-        d[s] = 0;
+        d[s]   = 0;
         vis[s] = 1;
         while (!q.empty()) {
             int x = q.front();
@@ -92,7 +92,7 @@ struct Dinic {
                 Edge &e = edge[G[x][i]];
                 if (!vis[e.v] && e.cap > e.flow) {
                     vis[e.v] = true;
-                    d[e.v] = d[x] + 1;
+                    d[e.v]   = d[x] + 1;
                     q.push(e.v);
                 }
             }
@@ -120,7 +120,7 @@ struct Dinic {
     T dinitz(int s, int t) {
         this->s = s;
         this->t = t;
-        T flow = 0;
+        T flow  = 0;
         while (bfs()) {
             memset(cur, 0, sizeof cur);
             flow += dfs(s, INF);

@@ -42,7 +42,7 @@ int main() {
     for (int i = 2; i <= LIMIT; i++) {
         if (vis[i]) continue;
         prime[idx] = i;
-        pos[i] = idx++;
+        pos[i]     = idx++;
         for (int j = i + i; j <= LIMIT; j += i) { vis[j] = 1; }
     }
     findMask();

@@ -30,13 +30,13 @@ using namespace std;
 #define WRITE freopen("out.txt", "w", stdout)
 template <class T> inline void input(T &x) {
     register char c = getchar();
-    x = 0;
-    int neg = 0;
+    x               = 0;
+    int neg         = 0;
     for (; ((c < 48 || c > 57) && c != '-'); c = getchar())
         ;
     if (c == '-') {
         neg = 1;
-        c = getchar();
+        c   = getchar();
     }
     for (; c > 47 && c < 58; c = getchar()) {
         x = (x << 1) + (x << 3) + c - 48;
@@ -61,7 +61,7 @@ template <class T> inline T modinverse(T a, T M) { return bigmod(a, M - 2, M); }
 
 const int N = 3e3 + 5;
 int dp[N][N];
-pair<int, int> ptr[N][N];
+int pt[N][N];
 int main() {
     string s, t;
     cin >> s >> t;
@@ -69,40 +69,31 @@ int main() {
         for (int j = 0; j < t.size(); j++) {
             if (s[i] == t[j]) {
                 dp[i + 1][j + 1] = 1 + dp[i][j];
-                ptr[i + 1][j + 1] = make_pair(i, j);
+                pt[i + 1][j + 1] = 0;
             } else {
-                if (dp[i][j + 1] > dp[i + 1][j])
-                    dp[i + 1][j + 1] = dp[i][j + 1],
-                                  ptr[i + 1][j + 1] = make_pair(i, j + 1);
-                else
-                    dp[i + 1][j + 1] = dp[i + 1][j],
-                                  ptr[i + 1][j + 1] = make_pair(i + 1, j);
+                if (dp[i + 1][j] > dp[i][j + 1]) {
+                    dp[i + 1][j + 1] = dp[i + 1][j];
+                    pt[i + 1][j + 1] = 1;
+                } else {
+                    dp[i + 1][j + 1] = dp[i][j + 1];
+                    pt[i + 1][j + 1] = 2;
+                }
             }
         }
     }
-    int lcs = dp[s.size()][t.size()];
-    cout << lcs << endl;
-    for (int i = 0; i <= s.size(); i++) {
-        for (int j = 0; j <= t.size(); j++) { printf("%d ", dp[i][j]); }
-        cout << endl;
-    }
-    for (int i = 0; i <= s.size(); i++) {
-        for (int j = 0; j <= t.size(); j++) {
-            printf("(%2d,%2d) ", ptr[i][j].F, ptr[i][j].S);
-        }
-        cout << endl;
-    }
-    string ans;
-    int x = s.size(), y = t.size();
 
-    while (lcs) {
-        cout << lcs << endl;
-        if (ptr[x][y] == make_pair(x - 1, y - 1))
-            ans.push_back(s[x - 1]), lcs--;
-        x = ptr[x][y].F;
-        y = ptr[x][y].S;
-        cout << x << " " << y << endl;
+    int n = dp[s.size()][t.size()];
+    string res;
+    int x = s.size(), y = t.size();
+    while (res.size() < n) {
+        if (pt[x][y] == 0) {
+            x--, y--;
+            res.push_back(s[x]);
+        } else if (pt[x][y] == 1)
+            y--;
+        else if (pt[x][y] == 2)
+            x--;
     }
-    reverse(ans.begin(), ans.end());
-    cout << ans << endl;
+    reverse(res.begin(), res.end());
+    cout << res << endl;
 }

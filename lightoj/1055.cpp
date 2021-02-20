@@ -84,7 +84,7 @@ int main() {
         q.push(begin);
         map<Pos, int> Dis;
         Dis[begin] = 0;
-        bool flag = 0;
+        bool flag  = 0;
         while (!q.empty()) {
             Pos cur = q.front();
             q.pop();

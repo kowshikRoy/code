@@ -10,7 +10,7 @@ int main() {
     x[1] = 0;
     for (int i = 1; i <= n; i++) cin >> B[i];
     for (int i = 1; i <= n; i++) {
-        A[i] = B[i] + x[i];
+        A[i]     = B[i] + x[i];
         x[i + 1] = max(A[i], x[i]);
     }
     for (int i = 1; i <= n; i++) cout << A[i] << " ";

@@ -2,7 +2,7 @@
 using namespace std;
 
 long long mod = 1e9 + 9;
-using Mat = vector<vector<long long>>;
+using Mat     = vector<vector<long long>>;
 
 Mat mul(Mat &A, Mat &B) {
     int r = A.size(), c = B[0].size();
@@ -43,7 +43,7 @@ int main() {
         else if (n == 3)
             cout << 2 << endl;
         else {
-            Mat B = exp(A, n - 3);
+            Mat B         = exp(A, n - 3);
             long long sum = (B[0][0] * 2 + B[0][1]) % mod;
             cout << sum << endl;
         }

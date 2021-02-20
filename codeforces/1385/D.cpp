@@ -19,8 +19,8 @@ int solve(int n, int b, int e, int x) {
             return T[n][x] = 1;
     }
     vis[n][x] = CS;
-    int mid = (b + e) / 2;
-    int ret = min(findC(b, mid, x) + solve(2 * n + 1, mid + 1, e, x + 1),
+    int mid   = (b + e) / 2;
+    int ret   = min(findC(b, mid, x) + solve(2 * n + 1, mid + 1, e, x + 1),
                   solve(2 * n, b, mid, x + 1) + findC(mid + 1, e, x));
     //	cout << n << " " << b << " " << e << " " << x << endl;
     return T[n][x] = ret;

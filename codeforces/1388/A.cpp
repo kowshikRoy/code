@@ -16,14 +16,14 @@ bool dfs(int t, int sum) {
 
     bool ret = false;
     for (int i = 0; i < 5; i++) {
-        int v = cp[i];
+        int v     = cp[i];
         bool flag = true;
         for (int j = 0; j < t; j++) {
             if (v == cur[j]) { flag = false; }
         }
         if (!flag) continue;
         cur[t] = v;
-        ret = dfs(t + 1, sum + v);
+        ret    = dfs(t + 1, sum + v);
         cur[t] = -1;
         if (ret) break;
     }

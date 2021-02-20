@@ -17,7 +17,7 @@ template <class T> inline T modinverse(T a, T M) { return bigmod(a, M - 2, M); }
 int dp[100005][26];
 long long f[100005], g[100005];
 long long mod = 1e9 + 7;
-const int N = 1e5 + 5;
+const int N   = 1e5 + 5;
 
 int main() {
     string s;

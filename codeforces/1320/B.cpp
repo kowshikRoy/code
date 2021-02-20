@@ -26,10 +26,10 @@ void bfs(int s, vector<int> g[], int dis[]) {
 }
 
 int calcMin() {
-    int ans = 0;
+    int ans   = 0;
     int pivot = source;
     for (int i = 1; i < path.size(); i++) {
-        pivot = path[i - 1];
+        pivot      = path[i - 1];
         int choice = path[i];
         if (rdis[choice] + 1 == rdis[pivot]) continue;
         else
@@ -39,12 +39,12 @@ int calcMin() {
 }
 
 int calcMax() {
-    int ans = 0;
+    int ans   = 0;
     int pivot = source;
     for (int i = 1; i < path.size(); i++) {
-        pivot = path[i - 1];
+        pivot      = path[i - 1];
         int choice = path[i];
-        int iMin = 1e9;
+        int iMin   = 1e9;
         for (auto v : g[pivot]) { iMin = min(iMin, rdis[v]); }
         int cnt = 0, pick = -1;
         for (auto v : g[pivot]) {

@@ -7,7 +7,7 @@ vector<int> pivot;
 void process(string &s) {
     vector<int> cur(26, -1);
     for (int i = (int)s.length(); i >= 0; i--) {
-        ptr[i] = cur;
+        ptr[i]          = cur;
         cur[s[i] - 'a'] = i;
     }
     pivot = cur;
@@ -23,7 +23,7 @@ int main() {
         cin >> s;
         cin >> t;
         process(s);
-        int turn = 0;
+        int turn      = 0;
         bool possible = 1;
         for (int i = 0; i < t.size();) {
             turn++;

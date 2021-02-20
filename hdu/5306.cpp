@@ -9,13 +9,13 @@ using namespace std;
 #define all(v)       v.begin(), v.end()
 template <class T> inline void input(T &x) {
     register char c = getchar();
-    x = 0;
-    int neg = 0;
+    x               = 0;
+    int neg         = 0;
     for (; ((c < 48 || c > 57) && c != '-'); c = getchar())
         ;
     if (c == '-') {
         neg = 1;
-        c = getchar();
+        c   = getchar();
     }
     for (; c > 47 && c < 58; c = getchar()) {
         x = (x << 1) + (x << 3) + c - 48;
@@ -34,7 +34,7 @@ struct seg {
 } seg[N << 2];
 
 void up(int n) {
-    seg[n].sum = seg[lc].sum + seg[rc].sum;
+    seg[n].sum  = seg[lc].sum + seg[rc].sum;
     seg[n].iMax = max(seg[lc].iMax, seg[rc].iMax);
     merge(all(seg[lc].v), all(seg[rc].v), seg[n].v.begin());
     long long sum = 0;
@@ -50,7 +50,7 @@ void build(int n, int b, int e) {
         seg[n].sum = seg[n].iMax = a[b];
         seg[n].v.push_back(a[b]);
         ;
-        seg[n].lazy = 0;
+        seg[n].lazy    = 0;
         seg[n].hasLazy = false;
     }
     build(lc, b, mid);

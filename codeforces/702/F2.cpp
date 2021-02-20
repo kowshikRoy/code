@@ -28,14 +28,14 @@ unsigned int genPri() {
 
 node *reassign(node *n, node *l, node *r, unsigned int pri, int val, int sum,
                int i) {
-    n->left = l;
-    n->right = r;
-    n->pri = pri;
-    n->val = val;
+    n->left    = l;
+    n->right   = r;
+    n->pri     = pri;
+    n->val     = val;
     n->lazyVal = 0;
-    n->sum = sum;
+    n->sum     = sum;
     n->lazySum = 0;
-    n->i = i;
+    n->i       = i;
     return n;
 }
 
@@ -141,8 +141,8 @@ int main() {
         while (rl->val < lr->val) {
             node *tl, *tr;
             tie(tl, tr) = split(r, rl->val + 1);
-            l = ins(l, tl);
-            r = tr;
+            l           = ins(l, tl);
+            r           = tr;
             if (!l || !r) break;
             rl = getLeft(r);
             lr = getRight(l);

@@ -24,15 +24,15 @@ int main() {
         sort(b, b + n);
         int nu = (int)(unique(b, b + n) - b), pivot = 0;
         for (int i = 0; i < nu; i++) {
-            int j = pivot;
+            int j   = pivot;
             int cnt = 0;
             for (; j < n && a[j] == b[i]; j++) cnt++;
-            c[i] = cnt;
+            c[i]  = cnt;
             pivot = j;
         }
 
         long long ans = 0;
-        pivot = 0;
+        pivot         = 0;
         for (int i = 0; i < nu; i++) {
             if (2 * b[i] > b[nu - 1]) break;
             int ptr = bs(b, pivot, nu - 1, 2 * b[i]);

@@ -6,16 +6,16 @@ int main() {
     cin.tie(0);
     int n;
     cin >> n;
-    int cnt = 0;
+    int cnt  = 0;
     int iMax = 0;
-    int pre = INT_MAX;
+    int pre  = INT_MAX;
     for (int i = 0; i < n; i++) {
         int x;
         cin >> x;
         if (x > pre) cnt++;
         else {
             iMax = max(cnt, iMax);
-            cnt = 1;
+            cnt  = 1;
         }
         pre = x;
     }

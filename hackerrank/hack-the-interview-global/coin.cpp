@@ -6,7 +6,7 @@ int main() {
     cin >> n;
     int im1 = 0, im2 = 0;
     char pre = 'W';
-    int cur = 0;
+    int cur  = 0;
     for (int i = 0; i < n; i++) {
         string s;
         cin >> s;

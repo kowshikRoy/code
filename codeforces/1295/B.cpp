@@ -27,7 +27,7 @@ int main() {
         }
         long long psum = (x / sum) * sum - sum;
         if (sign(psum) * sign(sum) < 0) psum = 0;
-        s = s + s + s;
+        s             = s + s + s;
         long long ans = 0;
         for (int i = 0; i < s.size(); i++) {
             psum += (s[i] == '1') ? -1 : 1;

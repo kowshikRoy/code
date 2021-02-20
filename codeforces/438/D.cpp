@@ -27,20 +27,20 @@ using namespace std;
     cin.tie(0)
 template <class T> inline void input(T &x) {
     register char c = gc();
-    x = 0;
-    int neg = 0;
+    x               = 0;
+    int neg         = 0;
     for (; ((c < 48 || c > 57) && c != '-'); c = gc())
         ;
     if (c == '-') {
         neg = 1;
-        c = gc();
+        c   = gc();
     }
     for (; c > 47 && c < 58; c = gc()) { x = (x << 1) + (x << 3) + c - 48; }
     if (neg) x = -x;
 }
 
 const int N = 4e5 + 5;
-using PII = pair<int, int>;
+using PII   = pair<int, int>;
 set<PII> seg[N];
 long long sum[N];
 int a[N];

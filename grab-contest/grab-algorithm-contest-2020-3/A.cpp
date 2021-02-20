@@ -13,7 +13,7 @@ int main() {
         if (n % i == 0) {
             if (sumDigit(i) > iMax) {
                 iMax = sumDigit(i);
-                ans = i;
+                ans  = i;
             }
         }
     }

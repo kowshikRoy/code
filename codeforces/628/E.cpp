@@ -52,7 +52,7 @@ int main() {
         vector<int> ptr(n + m + 1, -1);
 
         vector<pair<int, int>> &now = arr[i];
-        int zero = -1;
+        int zero                    = -1;
         for (int j = 0; j < now.size(); j++) {
             auto p = now[j];
             int x = p.first, y = p.second;
@@ -69,7 +69,7 @@ int main() {
             int x = p.first, y = p.second;
             if (g[x][y] == 'z') {
                 upd(y - L[x][y] + 1, 1);
-                int v = query(y);
+                int v  = query(y);
                 int xx = ptr[j];
                 if (xx != -1) v -= dp[xx][y];
                 ans += v;

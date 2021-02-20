@@ -14,10 +14,10 @@ int main() {
     cin >> n;
     for (int i = 1; i <= n; i++) { cin >> p[i]; }
     sum[n] = p[n];
-    m[n] = p[n];
+    m[n]   = p[n];
     for (int i = n - 1; i >= 1; i--) {
         sum[i] = sum[i + 1] + p[i];
-        m[i] = min(m[i + 1], p[i]);
+        m[i]   = min(m[i + 1], p[i]);
     }
 
     long long A = 0, B = 1;

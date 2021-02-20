@@ -127,8 +127,8 @@ int main() {
         while (rl->val < lr->val) {
             node *tl, *tr;
             tie(tl, tr) = split(r, rl->val + 1);
-            l = ins(l, tl);
-            r = tr;
+            l           = ins(l, tl);
+            r           = tr;
             if (!l || !r) break;
             rl = getLeft(r);
             lr = getRight(l);

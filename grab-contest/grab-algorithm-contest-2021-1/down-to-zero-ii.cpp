@@ -12,7 +12,7 @@ int solve(int n) {
     for (int i = 2; i * i <= n; i++) {
         if (n % i == 0) ret = min(ret, 1 + solve(n / i));
     }
-    ret = min(ret, 1 + solve(n - 1));
+    ret          = min(ret, 1 + solve(n - 1));
     return dp[n] = ret;
 }
 

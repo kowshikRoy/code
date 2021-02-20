@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-using mat = vector<vector<long long>>;
+using mat     = vector<vector<long long>>;
 const int mod = 1e9 + 9;
 
 mat mul(mat &a, mat &b) {

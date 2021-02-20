@@ -14,7 +14,7 @@ int main() {
 
     for (int i = 0; i <= n; i++) dp[i] = (1 << 30) - 1;
     int iM = dp[0];
-    dp[A] = 0;
+    dp[A]  = 0;
     for (int i = 0; i <= n + 1; i++) {
         for (int j = 1; j <= n; j++) dp2[j] = dp[j];
         for (int j = 0; j < m; j++) {

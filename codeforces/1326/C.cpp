@@ -14,8 +14,8 @@ int main() {
         pos[A[i]] = i;
     }
 
-    int LIM = n - k + 1;
-    int pre = -1;
+    int LIM       = n - k + 1;
+    int pre       = -1;
     long long ans = 1;
     long long sum = 0;
     for (int i = 1; i <= n; i++) {

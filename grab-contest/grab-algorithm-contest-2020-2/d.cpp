@@ -14,9 +14,9 @@ int main() {
     int ans = INT_MAX;
     for (int i = k - 1; i < n; i++) {
         s.insert(a[i]);
-        int low = *s.begin();
+        int low  = *s.begin();
         int high = *s.rbegin();
-        ans = min(ans, high - low);
+        ans      = min(ans, high - low);
         s.erase(s.find(a[i - k + 1]));
     }
     cout << ans << endl;

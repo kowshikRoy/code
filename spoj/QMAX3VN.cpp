@@ -15,12 +15,12 @@ unsigned int genPri() {
 }
 node *reassign(node *n, node *l, node *r, unsigned int pri, int sz, int height,
                int val) {
-    n->left = l;
-    n->right = r;
-    n->pri = pri;
-    n->sz = sz;
+    n->left   = l;
+    n->right  = r;
+    n->pri    = pri;
+    n->sz     = sz;
     n->height = height;
-    n->val = val;
+    n->val    = val;
     return n;
 }
 

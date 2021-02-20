@@ -39,10 +39,10 @@ int main() {
                     auto a = make_pair(table[k][i], table[k][j]);
                     if (S.find(a) != S.end()) {
                         isPNF = false;
-                        r1 = S[a];
-                        r2 = k;
-                        c1 = i;
-                        c2 = j;
+                        r1    = S[a];
+                        r2    = k;
+                        c1    = i;
+                        c2    = j;
                         goto print;
                     }
                     S[a] = k;

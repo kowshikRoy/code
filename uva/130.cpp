@@ -34,10 +34,10 @@ int main() {
         int pos = 0;
         while (CountAlive(v) != 1) {
             int x = FindKthIdx(v, pos);
-            v[x] = -1;
+            v[x]  = -1;
             int y = FindKthIdx(v, x + 1);
-            v[x] = v[y];
-            v[y] = -1;
+            v[x]  = v[y];
+            v[y]  = -1;
 
             pos = x + 1;
         }

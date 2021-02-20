@@ -24,7 +24,7 @@ int main() {
 
     for (int i = 1; i + k - 1 <= n; i++) {
         int t = pre[i + k - 1] - pre[i - 1];
-        ans = min(ans, t);
+        ans   = min(ans, t);
     }
     cout << ans << endl;
 }

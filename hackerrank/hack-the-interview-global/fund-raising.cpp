@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-using LL = long long;
+using LL     = long long;
 const LL INF = LONG_LONG_MAX / 4;
 int n, m, k, t;
 LL charm[16][16];
@@ -20,7 +20,7 @@ LL calc(int g, int mask) {
 
     if (values.size() > n * k) return -1;
     sort(values.begin(), values.end());
-    LL sum = 0;
+    LL sum  = 0;
     int cnt = 0, ptr = n - 1;
     for (int i = values.size() - 1; i >= 0; i--) {
         cnt++;
@@ -45,7 +45,7 @@ LL solve(int g, int mask) {
         if (mem[g][i] >= 0) ret = max(ret, mem[g][i] + solve(g + 1, mask ^ i));
         if (i == 0) break;
     }
-    vis[g][mask] = 1;
+    vis[g][mask]       = 1;
     return dp[g][mask] = ret;
 }
 

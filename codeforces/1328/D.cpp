@@ -25,11 +25,11 @@ int solve(int pos, int pre, int begin) {
         int v = max(i, solve(pos + 1, i, begin));
         if (v < res) {
             path[pos][pre][begin] = i;
-            res = v;
+            res                   = v;
         }
     }
     vis[pos][pre][begin] = CS;
-    dp[pos][pre][begin] = res;
+    dp[pos][pre][begin]  = res;
     return res;
 }
 

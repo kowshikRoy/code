@@ -26,7 +26,7 @@ int main() {
             for (auto p : choice[i]) {
                 if (taken[p] == 0) {
                     taken[p] = 1;
-                    flag = 1;
+                    flag     = 1;
                     break;
                 }
             }

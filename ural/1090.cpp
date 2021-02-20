@@ -16,7 +16,7 @@ int main() {
     int n, K;
     cin >> n >> K;
     int h[n], u[n];
-    int ans = -1;
+    int ans   = -1;
     int pivot = 0;
     for (int i = 0; i < K; i++) {
         for (int j = 0; j < n; j++) cin >> h[j], u[j] = h[j];
@@ -29,7 +29,7 @@ int main() {
             update(h[j], 1);
         }
         if (c > ans) {
-            ans = c;
+            ans   = c;
             pivot = i + 1;
         }
         memset(B, 0, sizeof B);

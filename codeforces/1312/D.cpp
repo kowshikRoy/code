@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int N = 2e5 + 5;
-using LL = long long;
+const int N  = 2e5 + 5;
+using LL     = long long;
 const LL mod = 998244353;
 
 LL f[N], g[N];
@@ -40,10 +40,10 @@ int main() {
     long long fans = 0;
     for (int iMax = 2; iMax <= m; iMax++) {
         long long ans = 1;
-        ans = ncr(iMax - 1, n - 3);
-        ans = (ans * bigmod(2, n - 3, mod)) % mod;
-        ans = (ans * (iMax - n + 2)) % mod;
-        fans = (fans + ans) % mod;
+        ans           = ncr(iMax - 1, n - 3);
+        ans           = (ans * bigmod(2, n - 3, mod)) % mod;
+        ans           = (ans * (iMax - n + 2)) % mod;
+        fans          = (fans + ans) % mod;
     }
     cout << fans << endl;
 

@@ -28,7 +28,7 @@ int main() {
         for (int i = 1; i < n; i++) {
             if (a[i] >= pivot) continue;
             else {
-                ans = max(ans, MSB(pivot - a[i]));
+                ans  = max(ans, MSB(pivot - a[i]));
                 a[i] = pivot;
             }
         }

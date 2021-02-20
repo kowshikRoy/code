@@ -18,10 +18,10 @@ int main() {
     int pb = 0, pe = 0;
     bool flag = 1;
     for (int i = 0; i < m; i++) {
-        int x = l[i];
+        int x    = l[i];
         int minX = n - sl[i] + 1;
-        int nb = max(minX, pb + 1);
-        int ne = nb + l[i] - 1;
+        int nb   = max(minX, pb + 1);
+        int ne   = nb + l[i] - 1;
         if (nb > pe + 1 || nb <= pb) {
             flag = 0;
             break;

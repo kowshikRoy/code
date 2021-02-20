@@ -18,7 +18,7 @@ bool dfs_copy(int v) {
             parent[u] = v;
             if (dfs_copy(u)) return true;
         } else if (color[u] == 1) {
-            cycle_end = v;
+            cycle_end   = v;
             cycle_start = u;
             return true;
         }

@@ -121,8 +121,8 @@ bool POPoly(const vector<point> &p, point q) {
 // circle centered at c with radius r > 0
 vector<point> CLIN(point a, point b, point c, double r) {
     vector<point> ret;
-    b = b - a;
-    a = a - c;
+    b        = b - a;
+    a        = a - c;
     double A = dot(b, b);
     double B = dot(a, b);
     double C = dot(a, a) - r * r;
@@ -141,7 +141,7 @@ vector<point> CCIN(point a, point b, double r, double R) {
     if (d > r + R || d + min(r, R) < max(r, R)) return ret;
     double x = (d * d - R * R + r * r) / (2 * d);
     double y = sqrt(r * r - x * x);
-    point v = (b - a) / d;
+    point v  = (b - a) / d;
     ret.push_back(a + v * x + rotccw90(v) * y);
     if (y > 0) ret.push_back(a + v * x - rotccw90(v) * y);
     return ret;
@@ -178,7 +178,7 @@ double TRICA(point r, point a, point b, double R) {
 // Simple polygon intersection area with a circle.
 double SPICA(vector<point> &p, point r, double R) {
     double ret = 0;
-    int n = p.size();
+    int n      = p.size();
     for (int i = 0; i < n; i++) {
         int turn = dcmp(cross(p[i] - r, p[NEX(i)] - r));
         if (turn > 0) ret += TRICA(r, p[i], p[NEX(i)], R);
@@ -207,7 +207,7 @@ point ComputeCentroid(const vector<point> &p) {
     double scale = 6.0 * ComputeSignedArea(p);
     for (int i = 0; i < p.size(); i++) {
         int j = (i + 1) % p.size();
-        c = c + (p[i] + p[j]) * (p[i].x * p[j].y - p[j].x * p[i].y);
+        c     = c + (p[i] + p[j]) * (p[i].x * p[j].y - p[j].x * p[i].y);
     }
     return c / scale;
 }
@@ -218,7 +218,7 @@ point CCN(const vector<point> &p) {
     double scale = 6.0 * ComputeSignedArea(p);
     for (int i = 0; i < p.size(); i++) {
         int j = (i + 1) % p.size();
-        c = c + (p[i] + p[j]) * (p[i].x * p[j].y - p[j].x * p[i].y);
+        c     = c + (p[i] + p[j]) * (p[i].x * p[j].y - p[j].x * p[i].y);
     }
     return c / scale;
 }
@@ -310,9 +310,9 @@ int main() {
         Pint D = Pint(0, s);
 
         vector<vec> vectors = {B - A, C - B, D - C, A - D};
-        vec ray = Y - X;
-        Pint origin = X;
-        Pint t = X;
+        vec ray             = Y - X;
+        Pint origin         = X;
+        Pint t              = X;
 
         int ans = 0;
 

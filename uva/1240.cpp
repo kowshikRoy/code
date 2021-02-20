@@ -18,7 +18,7 @@ int solve(int last, int mask) {
             }
         }
     }
-    vis[last][t][mask] = _cnt;
+    vis[last][t][mask]       = _cnt;
     return dp[last][t][mask] = ret;
 }
 

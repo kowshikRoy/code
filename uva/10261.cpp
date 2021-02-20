@@ -14,10 +14,10 @@ int solve(int idx, int l, int r) {
     if (l >= dock[idx]) ret1 = 1 + solve(idx + 1, l - dock[idx], r);
     if (r >= dock[idx]) ret2 = 1 + solve(idx + 1, l, r - dock[idx]);
     if (ret1 >= ret2) {
-        ret = ret1;
+        ret         = ret1;
         put[idx][l] = PORT;
     } else {
-        ret = ret2;
+        ret         = ret2;
         put[idx][l] = STARBOARD;
     }
     return ret;

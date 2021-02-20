@@ -28,7 +28,7 @@ int main() {
             if (x == y) continue;
             for (int i = 1; i <= n; i++) {
                 int a = P[i][x] + P[n][y] - P[i][y];
-                ans = max(ans, a);
+                ans   = max(ans, a);
             }
         }
     }

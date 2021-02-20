@@ -36,13 +36,13 @@ using namespace std;
 #define WRITE freopen("out.txt", "w", stdout)
 template <class T> inline void input(T &x) {
     register char c = getchar();
-    x = 0;
-    int neg = 0;
+    x               = 0;
+    int neg         = 0;
     for (; ((c < 48 || c > 57) && c != '-'); c = getchar())
         ;
     if (c == '-') {
         neg = 1;
-        c = getchar();
+        c   = getchar();
     }
     for (; c > 47 && c < 58; c = getchar()) {
         x = (x << 1) + (x << 3) + c - 48;
@@ -73,7 +73,7 @@ LL dp[N][2];
 LL mod = 1e9 + 7;
 
 void dfs(int u) {
-    vis[u] = 1;
+    vis[u]    = 1;
     bool leaf = true;
     for (auto v : G[u]) {
         if (vis[v] == 0) {

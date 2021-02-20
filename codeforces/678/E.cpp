@@ -17,7 +17,7 @@ double solve(int r, int mask) {
         }
     }
     vis[r][mask] = 1;
-    dp[r][mask] = ans;
+    dp[r][mask]  = ans;
     return ans;
 }
 int main() {
@@ -32,8 +32,8 @@ int main() {
         return 0;
     }
     double ans = 0;
-    int cnt = 0;
-    int mask = (1 << n) - 1;
+    int cnt    = 0;
+    int mask   = (1 << n) - 1;
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
             int nmask = mask ^ (1 << i) ^ (1 << j);

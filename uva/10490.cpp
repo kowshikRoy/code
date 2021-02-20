@@ -28,7 +28,7 @@ int main() {
     ll n;
     while (cin >> n) {
         if (n == 0) break;
-        ll v = (1ULL << (n - 1)) * ((1ULL << n) - 1);
+        ll v          = (1ULL << (n - 1)) * ((1ULL << n) - 1);
         map<ll, ll> f = factor((1ULL << n) - 1);
         f[2] += n - 1;
 

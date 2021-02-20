@@ -16,7 +16,7 @@ int solve(int i, int j) {
     if (i >= j) return 0;
     int &ret = dp[i][j];
     if (vis[i][j] == CS) return ret;
-    ret = INT_MAX;
+    ret       = INT_MAX;
     int pivot = -1;
     solve(i, j - 1);
     solve(i + 1, j);
@@ -25,7 +25,7 @@ int solve(int i, int j) {
             solve(i, k - 1) + solve(k + 1, j) + sum(i, k - 1) + sum(k + 1, j);
         if (val < ret) {
             pivot = k;
-            ret = val;
+            ret   = val;
         }
     }
     vis[i][j] = CS;

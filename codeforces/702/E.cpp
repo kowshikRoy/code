@@ -12,10 +12,10 @@ vector<Node> vec;
 vector<Node> mul(vector<Node> a, vector<Node> b) {
     vector<Node> R(n);
     for (int i = 0; i < n; i++) {
-        R[i].len = a[i].len + b[i].len;
-        int x = a[i].to;
-        R[i].to = b[x].to;
-        R[i].sum = a[i].sum + b[x].sum;
+        R[i].len  = a[i].len + b[i].len;
+        int x     = a[i].to;
+        R[i].to   = b[x].to;
+        R[i].sum  = a[i].sum + b[x].sum;
         R[i].iMin = min(a[i].iMin, b[x].iMin);
     }
     return R;
@@ -30,7 +30,7 @@ int main() {
     for (int i = 0; i < n; i++)
         cin >> vec[i].sum, vec[i].iMin = vec[i].sum, vec[i].len = 1;
 
-    auto ans = vec;
+    auto ans  = vec;
     auto modu = vec;
     K--;
     while (K) {

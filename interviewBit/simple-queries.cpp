@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-const int N = 10001;
+const int N   = 10001;
 const int mod = 1e9 + 7;
 vector<int> srlve(vector<int> &a, vector<int> &b) {
     int n = (int)a.size();
@@ -43,7 +43,7 @@ vector<int> srlve(vector<int> &a, vector<int> &b) {
 
     vector<int> res;
     for (int i = 0; i < (int)b.size(); i++) {
-        int k = b[i];
+        int k   = b[i];
         auto it = lower_bound(P.begin(), P.end(), k) - P.begin();
         res.push_back((int)A[it]);
     }

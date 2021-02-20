@@ -2,7 +2,7 @@
 using namespace std;
 
 const int INF = INT_MAX / 4;
-const int N = 2005;
+const int N   = 2005;
 int a[N], n, s;
 
 int dp1[N], dp2[N];
@@ -46,7 +46,7 @@ int solve1(int v) {
         if (u == -1) return ret = solve2(v);
 
         int dt = d == 1 ? cd(u, v) : cd(v, u);
-        ret = min(ret, solve2(u) + dt);
+        ret    = min(ret, solve2(u) + dt);
     }
     return ret;
 }
@@ -110,7 +110,7 @@ int main() {
         }
     }
     int minV = *min_element(a, a + n);
-    int ans = INF;
+    int ans  = INF;
     memset(dp1, -1, sizeof dp1);
     memset(dp2, -1, sizeof dp2);
 
