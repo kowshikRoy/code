@@ -1,50 +1,70 @@
-#include <assert.h>
-#include <limits.h>
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
+/**
+ * Author: Repon Kumar Roy
+ * Date: 2021-02-21
+ * Task: V
+ */
 
-#include <algorithm>
-#include <bitset>
-#include <cmath>
-#include <complex>
-#include <deque>
-#include <functional>
-#include <iostream>
-#include <map>
-#include <queue>
-#include <set>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
-const int maxn = 1e5 + 5;
 
-int N, M vector<int> G[maxn];
-long long dp[N];
+const int N = 1e5 + 5;
 
-void func(long long &a, long long b) { a = (a * b) % M; }
+vector<int> g[N], child[N], pf[N], suf[N];
+long long dp[N], ans[N], up[N];
+int n, mod;
+
 void dfs(int u, int p) {
-    dp[u] = 1;
-    for (auto v : G[u])
+    long long sum = 1;
+    for (auto v : g[u])
         if (v != p) {
             dfs(v, u);
-            mul(dp[u], 1 + dp[v]);
+            sum = (sum * (1 + dp[v])) % mod;
+            child[u].push_back(v);
         }
+    dp[u] = sum;
+
+    long long s = 1;
+    for (int i = 0; i < child[u].size(); i++) {
+        int v = child[u][i];
+        s     = (s * (1 + dp[v])) % mod;
+        pf[u].push_back(s);
+    }
+
+    s = 1;
+    for (int i = (int)child[u].size() - 1; i >= 0; i--) {
+        int v = child[u][i];
+        s     = (s * (1 + dp[v])) % mod;
+        suf[u].push_back(s);
+    }
+    reverse(suf[u].begin(), suf[u].end());
+}
+
+void dfs2(int u, int p) {
+    ans[u] = (dp[u] * (1 + up[u])) % mod;
+    for (int i = 0; i < child[u].size(); i++) {
+        int v       = child[u][i];
+        long long s = 1;
+        if (i > 0) s = (s * pf[u][i - 1]) % mod;
+        if (i + 1 < child[u].size()) s = (s * suf[u][i + 1]) % mod;
+        if (p != -1) s = (s * (1 + up[u])) % mod;
+        up[v] = s;
+        dfs2(v, u);
+    }
 }
 
 int main() {
-    scanf("%d %d", &N, &M);
-    for (int i = 0; i < N - 1; i++) {
-        int u, v;
-        scanf("%d %d", &u, &v);
-        G[u].push_back(v);
-        G[v].push_back(u);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cin >> n >> mod;
+    for (int i = 0; i < n - 1; i++) {
+        int a, b;
+        cin >> a >> b;
+        g[a].push_back(b);
+        g[b].push_back(a);
     }
     dfs(1, -1);
-  for(int i = 1; i <= n; i++
-  return 0;
+    dfs2(1, -1);
+    /* for(int i = 1; i <= n; i ++) printf("dp[%d] = %lld\n", i, dp[i]); */
+    /* for(int i = 1; i <= n; i ++) printf("up[%d] = %lld\n", i, up[i]); */
+    for (int i = 1; i <= n; i++) printf("%lld\n", ans[i]);
 }
