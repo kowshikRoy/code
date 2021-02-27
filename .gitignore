@@ -71,3 +71,4 @@ sane
 bin/
 in
 *.in
+gen.py
