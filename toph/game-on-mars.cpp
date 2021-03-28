@@ -25,24 +25,32 @@ using namespace std;
 #define REP(i, n) for (int i = 0; i < (n); i++)
 
 void solve(int cs) {
-    int n, x, y;
+    int n;
     cin >> n;
     int g = 0;
     vector<int> v;
+    vector<int> x(n), y(n);
     for (int i = 0; i < n; i++) {
-        cin >> x >> y;
-        g ^= x ^ y;
-        v.push_back(x);
-        v.push_back(y);
+        cin >> x[i] >> y[i];
+        x[i] --; y[i] --;
+        g ^= ((x[i] ^ y[i]) + 1);
     }
     printf("Case %d: %s\n", cs, g ? "Alice" : "Bob");
+    dbg(g);
     if(g) {
-        dbg(v);
-        dbg(g);
         int ans = 0;
-        for(auto p: v) {
-            int t = p ^ g;
-            if(p > t) ans ++;
+        for(int i = 0; i < n; i ++) {
+            int t = g ^ ((x[i] ^ y[i])  + 1);
+            dbg(t);
+            if(t == 0) ans ++;
+            else {
+                t --;
+                int a = t ^ y[i], b = t ^ x[i];
+                dbg(t,a,b,x[i], y[i]);
+                if(a < x[i]) ans ++;
+                if(b < y[i]) ans ++;
+            }
+
         }
         printf("%d\n", ans);
 
