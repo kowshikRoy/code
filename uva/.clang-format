@@ -1,0 +1,12 @@
+﻿---
+BasedOnStyle: Google
+ColumnLimit: 80
+AlignConsecutiveMacros: 'true'
+AlignConsecutiveAssignments: 'false'
+AllowShortBlocksOnASingleLine: 'true'
+AllowShortCaseLabelsOnASingleLine: 'true'
+IndentPPDirectives: None
+IndentWidth: '2'
+MacroBlockEnd: ' '
+
+...

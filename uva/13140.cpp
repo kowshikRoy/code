@@ -11,9 +11,9 @@ using namespace std;
 #define REP(i, n) for (int i = 0; i < (n); i++)
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(0);
 
-    for (int i = 9999; i <= 10005; i++) { cout << i << " " << i * i << endl; }
-    return 0;
+  for (int i = 9999; i <= 10005; i++) { cout << i << " " << i * i << endl; }
+  return 0;
 }

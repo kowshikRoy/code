@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/matrixcode/code/ostep",
+      "program": "/Users/matrixcode/code/ostep/build/Debug/outDebug"
+    }
+  ]
+}
