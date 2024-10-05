@@ -13,3 +13,18 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_library(
+    name = "integer_to_roman",
+    srcs = ["integer_to_roman.cc"],
+    hdrs = ["integer_to_roman.h"]
+)
+cc_test(
+    name = "integer_to_roman_test",
+    srcs = ["integer_to_roman_test.cc"],
+    deps = [
+        ":integer_to_roman",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main", 
+    ]
+)
