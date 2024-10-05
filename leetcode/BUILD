@@ -45,3 +45,19 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_library(
+    name = "letter_combinations_of_a_phone_number",
+    srcs = ["letter_combinations_of_a_phone_number.cc"],
+    hdrs = ["letter_combinations_of_a_phone_number.h"],
+)
+
+cc_test(
+    name = "letter_combinations_of_a_phone_number_test",
+    srcs = ["letter_combinations_of_a_phone_number_test.cc"],
+    deps = [
+        ":letter_combinations_of_a_phone_number",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
