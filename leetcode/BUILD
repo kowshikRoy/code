@@ -1,129 +1,131 @@
-cc_library(
-    name = "longest_substring_without_repeating_characters",
-    srcs = ["longest_substring_without_repeating_characters.cc"],
-    hdrs = ["longest_substring_without_repeating_characters.h"],
-)
+cc_library(name = "longest_substring_without_repeating_characters",
+           srcs = ["longest_substring_without_repeating_characters.cc"],
+           hdrs = ["longest_substring_without_repeating_characters.h"], )
 
-cc_test(
-    name = "longest_substring_without_repeating_characters_test",
-    srcs = ["longest_substring_without_repeating_characters_test.cc"],
-    deps = [
-        ":longest_substring_without_repeating_characters",
-        "@googletest//:gtest",
-        "@googletest//:gtest_main",
-    ],
-)
+    cc_test(name = "longest_substring_without_repeating_characters_test",
+            srcs = ["longest_substring_without_repeating_characters_test.cc"],
+            deps =
+                [
+                  ":longest_substring_without_repeating_characters",
+                  "@googletest//:gtest",
+                  "@googletest//:gtest_main",
+                ], )
 
-cc_library(
-    name = "integer_to_roman",
-    srcs = ["integer_to_roman.cc"],
-    hdrs = ["integer_to_roman.h"],
-)
+        cc_library(name = "integer_to_roman", srcs = ["integer_to_roman.cc"],
+                   hdrs = ["integer_to_roman.h"], )
 
-cc_test(
-    name = "integer_to_roman_test",
-    srcs = ["integer_to_roman_test.cc"],
-    deps = [
-        ":integer_to_roman",
-        "@googletest//:gtest",
-        "@googletest//:gtest_main",
-    ],
-)
+            cc_test(name = "integer_to_roman_test", srcs = ["integer_to_roman_test.cc"],
+                    deps =
+                        [
+                          ":integer_to_roman",
+                          "@googletest//:gtest",
+                          "@googletest//:gtest_main",
+                        ], )
 
-cc_library(
-    name = "roman_to_integer",
-    srcs = ["roman_to_integer.cc"],
-    hdrs = ["roman_to_integer.h"],
-)
+                cc_library(name = "roman_to_integer", srcs = ["roman_to_integer.cc"],
+                           hdrs = ["roman_to_integer.h"], )
 
-cc_test(
-    name = "roman_to_integer_test",
-    srcs = ["roman_to_integer_test.cc"],
-    deps = [
-        ":roman_to_integer",
-        "@googletest//:gtest",
-        "@googletest//:gtest_main",
-    ],
-)
+                    cc_test(name = "roman_to_integer_test", srcs = ["roman_to_integer_test.cc"],
+                            deps =
+                                [
+                                  ":roman_to_integer",
+                                  "@googletest//:gtest",
+                                  "@googletest//:gtest_main",
+                                ], )
 
-cc_library(
-    name = "letter_combinations_of_a_phone_number",
-    srcs = ["letter_combinations_of_a_phone_number.cc"],
-    hdrs = ["letter_combinations_of_a_phone_number.h"],
-)
+                        cc_library(name = "letter_combinations_of_a_phone_number",
+                                   srcs = ["letter_combinations_of_a_phone_number.cc"],
+                                   hdrs = ["letter_combinations_of_a_phone_number.h"], )
 
-cc_test(
-    name = "letter_combinations_of_a_phone_number_test",
-    srcs = ["letter_combinations_of_a_phone_number_test.cc"],
-    deps = [
-        ":letter_combinations_of_a_phone_number",
-        "@googletest//:gtest",
-        "@googletest//:gtest_main",
-    ],
-)
+                            cc_test(name = "letter_combinations_of_a_phone_number_test",
+                                    srcs = ["letter_combinations_of_a_phone_number_test.cc"],
+                                    deps =
+                                        [
+                                          ":letter_combinations_of_a_phone_number",
+                                          "@googletest//:gtest",
+                                          "@googletest//:gtest_main",
+                                        ], )
 
-cc_library(
-    name = "substring-with-concatenation-of-all-words",
-    srcs = ["substring-with-concatenation-of-all-words.cc"],
-    hdrs = [
-        "debug.h",
-        "substring-with-concatenation-of-all-words.h",
-    ],
-)
+                                cc_library(name = "substring-with-concatenation-of-all-words",
+                                           srcs = ["substring-with-concatenation-of-all-words.cc"],
+                                           hdrs =
+                                               [
+                                                 "debug.h",
+                                                 "substring-with-concatenation-of-all-words.h",
+                                               ], )
 
-cc_test(
-    name = "substring-with-concatenation-of-all-words-test",
-    srcs = ["substring-with-concatenation-of-all-words-test.cc"],
-    deps = [
-        ":substring-with-concatenation-of-all-words",
-        "@googletest//:gtest",
-        "@googletest//:gtest_main",
-    ],
-)
+                                    cc_test(
+                                        name = "substring-with-concatenation-of-all-words-test",
+                                        srcs =
+                                            ["substring-with-concatenation-of-all-words-test.cc"],
+                                        deps =
+                                            [
+                                              ":substring-with-concatenation-of-all-words",
+                                              "@googletest//:gtest",
+                                              "@googletest//:gtest_main",
+                                            ], )
 
-cc_library(
-    name = "first-unique-character-in-a-string",
-    srcs = ["first-unique-character-in-a-string.cc"],
-    hdrs = ["first-unique-character-in-a-string.h"],
-)
+                                        cc_library(
+                                            name = "first-unique-character-in-a-string",
+                                            srcs = ["first-unique-character-in-a-string.cc"],
+                                            hdrs = ["first-unique-character-in-a-string.h"], )
 
-cc_test(
-    name = "first-unique-character-in-a-string-test",
-    srcs = ["first-unique-character-in-a-string-test.cc"],
-    deps = [
-        ":first-unique-character-in-a-string",
-        "@googletest//:gtest",
-        "@googletest//:gtest_main",
-    ],
-)
+                                            cc_test(
+                                                name = "first-unique-character-in-a-string-test",
+                                                srcs =
+                                                    ["first-unique-character-in-a-string-test.cc"],
+                                                deps =
+                                                    [
+                                                      ":first-unique-character-in-a-string",
+                                                      "@googletest//:gtest",
+                                                      "@googletest//:gtest_main",
+                                                    ], )
 
-cc_library(
-    name = "find-the-difference",
-    srcs = ["find-the-difference.cc"],
-    hdrs = ["find-the-difference.h"],
-)
+                                                cc_library(name = "find-the-difference",
+                                                           srcs = ["find-the-difference.cc"],
+                                                           hdrs = ["find-the-difference.h"], )
 
-cc_test(
-    name = "find-the-difference-test",
-    srcs = ["find-the-difference-test.cc"],
-    deps = [
-        ":find-the-difference",
-        "@googletest//:gtest",
-        "@googletest//:gtest_main",
-    ],
-)
-cc_library(
-    name = "set-mismatch",
-    srcs = ["set-mismatch.cc"],
-    hdrs = ["set-mismatch.h"],
-)
+                                                    cc_test(name = "find-the-difference-test",
+                                                            srcs = ["find-the-difference-test.cc"],
+                                                            deps =
+                                                                [
+                                                                  ":find-the-difference",
+                                                                  "@googletest//:gtest",
+                                                                  "@googletest//:gtest_main",
+                                                                ], )
 
-cc_test(
-    name = "set-mismatch-test",
-    srcs = ["set-mismatch-test.cc"],
-    deps = [
-        ":set-mismatch",
-        "@googletest//:gtest",
-        "@googletest//:gtest_main",
-    ],
-)
+                                                        cc_library(name = "set-mismatch",
+                                                                   srcs = ["set-mismatch.cc"],
+                                                                   hdrs = ["set-mismatch.h"], )
+
+                                                            cc_test(
+                                                                name = "set-mismatch-test",
+                                                                srcs = ["set-mismatch-test.cc"],
+                                                                deps =
+                                                                    [
+                                                                      ":set-mismatch",
+                                                                      "@googletest//:gtest",
+                                                                      "@googletest//:gtest_main",
+                                                                    ], )
+
+                                                                cc_library(
+                                                                    name =
+                                                                        "max-number-of-k-sum-pairs",
+                                                                    srcs = ["max-number-of-k-sum-"
+                                                                            "pairs.cc"],
+                                                                    hdrs = ["max-number-of-k-sum-"
+                                                                            "pairs.h"], )
+
+                                                                    cc_test(
+                                                                        name = "max-number-of-k-"
+                                                                               "sum-pairs-test",
+                                                                        srcs =
+                                                                            ["max-number-of-k-sum-"
+                                                                             "pairs-test.cc"],
+                                                                        deps = [
+                                                                          ":max-number-of-k-sum-"
+                                                                          "pairs",
+                                                                          "@googletest//:gtest",
+                                                                          "@googletest//"
+                                                                          ":gtest_main",
+                                                                        ], )
