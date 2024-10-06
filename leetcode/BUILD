@@ -127,3 +127,18 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+cc_library(
+    name = "single-number",
+    srcs = ["single-number.cc"],
+    hdrs = ["single-number.h"],
+)
+
+cc_test(
+    name = "single-number-test",
+    srcs = ["single-number-test.cc"],
+    deps = [
+        ":single-number",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
