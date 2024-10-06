@@ -96,3 +96,19 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_library(
+    name = "find-the-difference",
+    srcs = ["find-the-difference.cc"],
+    hdrs = ["find-the-difference.h"],
+)
+
+cc_test(
+    name = "find-the-difference-test",
+    srcs = ["find-the-difference-test.cc"],
+    deps = [
+        ":find-the-difference",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
