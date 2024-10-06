@@ -1,16 +1,3 @@
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
-
-using namespace std;
 template <typename A, typename B>
 ostream &operator<<(ostream &os, const pair<A, B> &p) {
   return os << '(' << p.first << ", " << p.second << ')';

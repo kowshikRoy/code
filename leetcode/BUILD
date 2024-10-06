@@ -197,3 +197,13 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "find-common-characters_test",
+    srcs = ["find-common-characters.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ], 
+)
