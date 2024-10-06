@@ -1,7 +1,7 @@
 #include "first-unique-character-in-a-string.h"
 
-#include <string>
 #include <iostream>
+#include <string>
 
 int Solution::firstUniqChar(std::string s) {
   int mp[26] = {0};

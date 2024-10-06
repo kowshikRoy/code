@@ -112,3 +112,18 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+cc_library(
+    name = "set-mismatch",
+    srcs = ["set-mismatch.cc"],
+    hdrs = ["set-mismatch.h"],
+)
+
+cc_test(
+    name = "set-mismatch-test",
+    srcs = ["set-mismatch-test.cc"],
+    deps = [
+        ":set-mismatch",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

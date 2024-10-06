@@ -1,7 +1,7 @@
 #include "find-the-difference.h"
 
-#include <string>
 #include <iostream>
+#include <string>
 
 char Solution::findTheDifference(std::string s, std::string t) {
   int mp[26] = {0};
