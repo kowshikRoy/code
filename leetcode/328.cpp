@@ -18,20 +18,21 @@ using namespace std;
  * };
  */
 class Solution {
-   public:
-    ListNode* oddEvenList(ListNode* head) {
-        ListNode *even = new ListNode(0), *odd = new ListNode(0);
-        auto p1 = even, p2 = odd, cur = head;
-        for (int i = 1; cur; i++) {
-            auto nxt  = cur->next;
-            cur->next = nullptr;
-            if (i & 1) p2->next = cur, p2 = cur;
-            else
-                p1->next = cur, p1 = cur;
-            cur = nxt;
-        }
-        if (p2 == odd) return even->next;
-        p2->next = even->next;
-        return odd->next;
+ public:
+  ListNode* oddEvenList(ListNode* head) {
+    ListNode *even = new ListNode(0), *odd = new ListNode(0);
+    auto p1 = even, p2 = odd, cur = head;
+    for (int i = 1; cur; i++) {
+      auto nxt = cur->next;
+      cur->next = nullptr;
+      if (i & 1)
+        p2->next = cur, p2 = cur;
+      else
+        p1->next = cur, p1 = cur;
+      cur = nxt;
     }
+    if (p2 == odd) return even->next;
+    p2->next = even->next;
+    return odd->next;
+  }
 };

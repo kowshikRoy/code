@@ -8,18 +8,18 @@
 using namespace std;
 
 class Solution {
-   public:
-    ListNode* reverseList(ListNode* head) {
-        auto cur      = head;
-        ListNode* pre = nullptr;
-        while (cur) {
-            auto p    = cur->next;
-            cur->next = pre;
-            pre       = cur;
-            cur       = p;
-        }
-        return pre;
+ public:
+  ListNode* reverseList(ListNode* head) {
+    auto cur = head;
+    ListNode* pre = nullptr;
+    while (cur) {
+      auto p = cur->next;
+      cur->next = pre;
+      pre = cur;
+      cur = p;
     }
+    return pre;
+  }
 };
 
 int main() { return 0; }

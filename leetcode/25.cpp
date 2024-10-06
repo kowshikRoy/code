@@ -1,10 +1,10 @@
 /**
  * Author: Repon Kumar Roy
  * Date: 2021-07-01
- * Task: 25 
+ * Task: 25
  */
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
@@ -18,9 +18,6 @@ using namespace std;
  * };
  */
 class Solution {
-public:
-    ListNode* reverseKGroup(ListNode* head, int k) {
-        
-    }
+ public:
+  ListNode* reverseKGroup(ListNode* head, int k) {}
 };
-

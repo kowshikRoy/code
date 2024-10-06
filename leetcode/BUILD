@@ -61,3 +61,19 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_library(
+    name = "substring-with-concatenation-of-all-words",
+    srcs = ["substring-with-concatenation-of-all-words.cc"],
+    hdrs = ["substring-with-concatenation-of-all-words.h", "debug.h"],
+)
+
+cc_test(
+    name = "substring-with-concatenation-of-all-words-test",
+    srcs = ["substring-with-concatenation-of-all-words-test.cc"],
+    deps = [
+        ":substring-with-concatenation-of-all-words",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

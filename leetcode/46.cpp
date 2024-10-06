@@ -8,29 +8,29 @@
 using namespace std;
 
 class Solution {
-   public:
-    vector<vector<int>> permute(vector<int>& nums) {
-        vector<vector<int>> ret;
-        vector<int> vis(nums.size(), 0);
-        vector<int> cur;
-        int n = (int)nums.size();
+ public:
+  vector<vector<int>> permute(vector<int>& nums) {
+    vector<vector<int>> ret;
+    vector<int> vis(nums.size(), 0);
+    vector<int> cur;
+    int n = (int)nums.size();
 
-        function<void()> go = [&]() -> void {
-            if (cur.size() == n) {
-                ret.push_back(cur);
-                return;
-            }
-            for (int i = 0; i < n; i++)
-                if (vis[i] == 0) {
-                    cur.push_back(nums[i]);
-                    vis[i] = 1;
-                    go();
-                    cur.pop_back();
-                    vis[i] = 0;
-                }
-        };
+    function<void()> go = [&]() -> void {
+      if (cur.size() == n) {
+        ret.push_back(cur);
+        return;
+      }
+      for (int i = 0; i < n; i++)
+        if (vis[i] == 0) {
+          cur.push_back(nums[i]);
+          vis[i] = 1;
+          go();
+          cur.pop_back();
+          vis[i] = 0;
+        }
+    };
 
-        go();
-        return ret;
-    }
+    go();
+    return ret;
+  }
 };

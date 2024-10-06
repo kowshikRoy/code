@@ -8,16 +8,16 @@
 using namespace std;
 
 class Solution {
-   public:
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        map<string, vector<string>> out;
-        for (auto s : strs) {
-            auto t = s;
-            sort(t.begin(), t.end());
-            out[t].push_back(s);
-        }
-        vector<vector<string>> result;
-        for (auto v : out) result.push_back(v.second);
-        return result;
+ public:
+  vector<vector<string>> groupAnagrams(vector<string>& strs) {
+    map<string, vector<string>> out;
+    for (auto s : strs) {
+      auto t = s;
+      sort(t.begin(), t.end());
+      out[t].push_back(s);
     }
+    vector<vector<string>> result;
+    for (auto v : out) result.push_back(v.second);
+    return result;
+  }
 };

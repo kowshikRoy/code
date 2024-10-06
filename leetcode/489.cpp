@@ -28,33 +28,33 @@ using namespace std;
  */
 
 class Solution {
-   private:
-    set<array<int, 2>> s;
-    int dir[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+ private:
+  set<array<int, 2>> s;
+  int dir[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 
-   public:
-    void cleanRoom(Robot& r) { dfs(0, 0, 0, r); }
-    void back(Robot& r) {
-        r.turnRight();
-        r.turnRight();
-        r.move();
-        r.turnRight();
-        r.turnRight();
+ public:
+  void cleanRoom(Robot& r) { dfs(0, 0, 0, r); }
+  void back(Robot& r) {
+    r.turnRight();
+    r.turnRight();
+    r.move();
+    r.turnRight();
+    r.turnRight();
+  }
+
+  void dfs(int x, int y, int d, Robot& r) {
+    if (s.count({x, y})) return;
+    s.insert({x, y});
+    r.clean();
+
+    for (int i = 0; i < 4; i++) {
+      int nd = (d + i) % 4;
+      int xp = x + dir[nd][0], yp = y + dir[nd][1];
+      if (s.find({xp, yp}) == s.end() && r.move()) {
+        dfs(xp, yp, nd, r);
+        back(r);
+      }
+      r.turnRight();
     }
-
-    void dfs(int x, int y, int d, Robot& r) {
-        if (s.count({x, y})) return;
-        s.insert({x, y});
-        r.clean();
-
-        for (int i = 0; i < 4; i++) {
-            int nd = (d + i) % 4;
-            int xp = x + dir[nd][0], yp = y + dir[nd][1];
-            if (s.find({xp, yp}) == s.end() && r.move()) {
-                dfs(xp, yp, nd, r);
-                back(r);
-            }
-            r.turnRight();
-        }
-    }
+  }
 };
