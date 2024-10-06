@@ -218,3 +218,13 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "word-pattern",
+    srcs = ["word-pattern.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
