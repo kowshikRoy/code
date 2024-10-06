@@ -112,6 +112,7 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
 cc_library(
     name = "set-mismatch",
     srcs = ["set-mismatch.cc"],
@@ -127,6 +128,7 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
 cc_library(
     name = "single-number",
     srcs = ["single-number.cc"],
@@ -142,7 +144,6 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
-
 
 cc_library(
     name = "contiguous-array",
@@ -160,7 +161,6 @@ cc_test(
     ],
 )
 
-
 cc_test(
     name = "jewels-and-stones",
     srcs = ["jewels-and-stones.cc"],
@@ -173,6 +173,16 @@ cc_test(
 cc_test(
     name = "maximum-number-of-balloons",
     srcs = ["maximum-number-of-balloons.cc"],
+    deps = [
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "4sum_test",
+    srcs = ["4sum.cc"],
+    copts = ["-std=c++17"],
     deps = [
         "@googletest//:gtest",
         "@googletest//:gtest_main",
