@@ -169,3 +169,12 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "maximum-number-of-balloons",
+    srcs = ["maximum-number-of-balloons.cc"],
+    deps = [
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

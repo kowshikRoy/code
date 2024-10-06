@@ -11,7 +11,6 @@
 #include <vector>
 
 using namespace std;
-
 template <typename A, typename B>
 ostream &operator<<(ostream &os, const pair<A, B> &p) {
   return os << '(' << p.first << ", " << p.second << ')';
@@ -33,10 +32,7 @@ void dbg_out(Head H, Tail... T) {
   if (sizeof...(T)) cerr << ", ";
   dbg_out(T...);
 }
-#ifdef LOCAL
 #define dbg(...)                                                     \
   cerr << "Line(" << __LINE__ << ") -> [" << #__VA_ARGS__ << "]: [", \
       dbg_out(__VA_ARGS__)
-#else
-#define dbg(...)
-#endif
+
