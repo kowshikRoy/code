@@ -188,6 +188,7 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
 cc_test(
     name = "h-index_test",
     srcs = ["h-index.cc"],
@@ -205,5 +206,15 @@ cc_test(
     deps = [
         "@googletest//:gtest",
         "@googletest//:gtest_main",
-    ], 
+    ],
+)
+
+cc_test(
+    name = "longest-palindrome",
+    srcs = ["longest-palindrome.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
 )
