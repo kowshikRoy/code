@@ -142,3 +142,20 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+
+cc_library(
+    name = "contiguous-array",
+    srcs = ["contiguous-array.cc"],
+    hdrs = ["contiguous-array.h"],
+)
+
+cc_test(
+    name = "contiguous-array-test",
+    srcs = ["contiguous-array-test.cc"],
+    deps = [
+        ":contiguous-array",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
