@@ -159,3 +159,13 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+
+cc_test(
+    name = "jewels-and-stones",
+    srcs = ["jewels-and-stones.cc"],
+    deps = [
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
