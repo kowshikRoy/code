@@ -65,7 +65,10 @@ cc_test(
 cc_library(
     name = "substring-with-concatenation-of-all-words",
     srcs = ["substring-with-concatenation-of-all-words.cc"],
-    hdrs = ["substring-with-concatenation-of-all-words.h", "debug.h"],
+    hdrs = [
+        "debug.h",
+        "substring-with-concatenation-of-all-words.h",
+    ],
 )
 
 cc_test(
@@ -73,6 +76,22 @@ cc_test(
     srcs = ["substring-with-concatenation-of-all-words-test.cc"],
     deps = [
         ":substring-with-concatenation-of-all-words",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "first-unique-character-in-a-string",
+    srcs = ["first-unique-character-in-a-string.cc"],
+    hdrs = ["first-unique-character-in-a-string.h"],
+)
+
+cc_test(
+    name = "first-unique-character-in-a-string-test",
+    srcs = ["first-unique-character-in-a-string-test.cc"],
+    deps = [
+        ":first-unique-character-in-a-string",
         "@googletest//:gtest",
         "@googletest//:gtest_main",
     ],
