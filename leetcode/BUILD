@@ -310,8 +310,8 @@ cc_test(
 )
 
 cc_test(
-    name = "4sum-ii",
-    srcs = ["4sum-ii.cc"],
+    name = "happy-number",
+    srcs = ["happy-number.cc"],
     deps = [
         "@googletest//:gtest_main",
     ],
