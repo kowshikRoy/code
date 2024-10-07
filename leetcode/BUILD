@@ -308,3 +308,11 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "4sum-ii",
+    srcs = ["4sum-ii.cc"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
