@@ -394,3 +394,12 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "intersection-of-two-arrays-ii",
+    srcs = ["intersection-of-two-arrays-ii.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
