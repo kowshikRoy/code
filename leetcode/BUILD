@@ -448,3 +448,12 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "most-frequent-subtree-sum",
+    srcs = ["most-frequent-subtree-sum.cc"],
+    copts = ["-std=c++20"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
