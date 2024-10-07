@@ -340,3 +340,12 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "longest-harmonious-subsequence",
+    srcs = ["longest-harmonious-subsequence.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
