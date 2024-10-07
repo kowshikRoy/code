@@ -316,3 +316,10 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+cc_test(
+    name = "how-many-numbers-are-smaller-than-the-current-number",
+    srcs = ["how-many-numbers-are-smaller-than-the-current-number.cc"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
