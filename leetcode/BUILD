@@ -421,3 +421,14 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+
+
+cc_test(
+    name = "kth-missing-positive-number",
+    srcs = ["kth-missing-positive-number.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
