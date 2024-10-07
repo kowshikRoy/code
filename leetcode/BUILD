@@ -422,11 +422,18 @@ cc_test(
     ],
 )
 
-
-
 cc_test(
     name = "kth-missing-positive-number",
     srcs = ["kth-missing-positive-number.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "valid-anagram",
+    srcs = ["valid-anagram.cc"],
     copts = ["-std=c++17"],
     deps = [
         "@googletest//:gtest_main",
