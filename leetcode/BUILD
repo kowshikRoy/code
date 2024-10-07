@@ -228,3 +228,13 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "unique-number-of-occurrences_test",
+    srcs = ["unique-number-of-occurrences.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
