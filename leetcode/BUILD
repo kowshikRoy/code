@@ -412,3 +412,12 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "n-repeated-element-in-size-2n-array",
+    srcs = ["n-repeated-element-in-size-2n-array.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
