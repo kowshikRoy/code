@@ -349,3 +349,12 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "find-words-that-can-be-formed-by-characters",
+    srcs = ["find-words-that-can-be-formed-by-characters.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
