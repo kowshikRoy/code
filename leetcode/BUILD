@@ -332,3 +332,11 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "sort-array-by-increasing-frequency",
+    srcs = ["sort-array-by-increasing-frequency.cc"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
