@@ -258,3 +258,23 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "group-anagrams",
+    srcs = ["group-anagrams.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "find-all-anagrams-in-a-string_test",
+    srcs = ["find-all-anagrams-in-a-string.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
