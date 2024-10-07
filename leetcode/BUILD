@@ -367,3 +367,12 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "contains-duplicate-ii",
+    srcs = ["contains-duplicate-ii.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
