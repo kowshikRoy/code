@@ -298,3 +298,13 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "sort-characters-by-frequency",
+    srcs = ["sort-characters-by-frequency.cc"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
