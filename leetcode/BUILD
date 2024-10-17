@@ -457,3 +457,12 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "set_matrix_zeroes_test",
+    srcs = ["set-matrix-zeroes.cc"],
+    copts = ["-std=c++20"],
+    deps = [
+        "@googletest//:gtest_main",
+    ],
+)
