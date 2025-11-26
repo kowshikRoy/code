@@ -5,7 +5,7 @@
 
 using namespace std;
 
-const int N = 1e5;
+const int N = 1e5 + 6;
 
 int main() {
     vector<int> v(N + 1, 0), prime(N + 1, 0);

@@ -1,20 +1,26 @@
 #include <iostream>
 #include <vector>
+#include <cstdio>
+
+using namespace std;
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int t;
-    std::cin >> t;
-    for(int cs = 0; cs < t; cs ++){ 
-        int n, x;
-        std::cin >> x >> n;
-        if(x > n) {
-            std::cout << "Invalid!" << std::endl;
+    scanf("%d", &t);
+    for (int cs = 1; cs <= t; cs++) {
+        int x, n;
+        scanf("%d %d", &x, &n);
+        if (x > n) {
+            printf("Invalid!\n\n");
             continue;
         }
         for (int i = x; i <= n; i += x) {
-            std::cout << i << std::endl;
+            printf("%d\n", i);
         }
-        cout << std::endl;
+        printf("\n");
     }
+
     return 0;
 }

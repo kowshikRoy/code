@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/matrixcode/code/lightoj/output/dimik-multiple-of-x'
+relocations:     []
+...
